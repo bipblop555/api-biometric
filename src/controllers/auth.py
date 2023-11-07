@@ -1,6 +1,6 @@
 from flask_login import login_user, login_manager, logout_user, LoginManager
 
-from models.user import User
+from src.models.user import User
 
 
 def login(username, password):
