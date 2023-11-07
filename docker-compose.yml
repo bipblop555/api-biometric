@@ -9,3 +9,21 @@ services:
       - "5000:5000"
     volumes:
       - ./src:/app
+  db:
+    image: mariadb:10.8
+    container_name: Database
+    ports:
+      - "3307:3306"
+    restart: always
+    volumes:
+      - ./database/dump.sql:/docker-entrypoint-initdb.d/dump.sql
+    environment:
+      MYSQL_DATABASE: back
+      MYSQL_ROOT_PASSWORD: password
+
+  adminer:
+    container_name: adminer
+    image: adminer
+    restart: always
+    ports:
+      - "1333:8080"
