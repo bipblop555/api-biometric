@@ -1,0 +1,13 @@
+FROM python:3.10-alpine
+
+WORKDIR /app/Backend
+
+COPY Backend/requirements/requirements.txt /requirements/requirements.txt
+
+RUN pip install -r /requirements/requirements.txt
+
+COPY Backend .
+
+ENV FLASK_APP=main.py
+
+CMD python src/app.py

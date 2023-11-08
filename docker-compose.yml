@@ -1,14 +1,14 @@
 version: '3.8'
 
 services:
-  web:
+  backend:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-Backend
     ports:
       - "5000:5000"
     volumes:
-      - ./src:/app
+      - ./Backend:/app/Backend
   db:
     image: mariadb:10.8
     container_name: Database
@@ -16,7 +16,7 @@ services:
       - "3307:3306"
     restart: always
     volumes:
-      - ./database/dump.sql:/docker-entrypoint-initdb.d/dump.sql
+      - ./Backend/database/dump.sql:/docker-entrypoint-initdb.d/dump.sql
     environment:
       MYSQL_DATABASE: back
       MYSQL_ROOT_PASSWORD: password
