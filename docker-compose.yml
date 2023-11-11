@@ -8,12 +8,13 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - ./Backend:/app/Backend
+      - ./Backend:/Backend
+    restart: always
   db:
     image: mariadb:10.8
     container_name: Database
     ports:
-      - "3307:3306"
+      - "3306:3306"
     restart: always
     volumes:
       - ./Backend/database/dump.sql:/docker-entrypoint-initdb.d/dump.sql

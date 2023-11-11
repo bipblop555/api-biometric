@@ -1,13 +1,18 @@
 FROM python:3.10-alpine
 
-WORKDIR /app/Backend
+WORKDIR /Backend
 
 COPY Backend/requirements/requirements.txt /requirements/requirements.txt
 
-RUN pip install -r /requirements/requirements.txt
+RUN apk update && \
+    apk add --no-cache mariadb-connector-c && \
+    pip install --no-cache-dir -r /requirements/requirements.txt
+
+RUN pip freeze > /requirements/requirements.txt
 
 COPY Backend .
 
-ENV FLASK_APP=main.py
+ENV FLASK_APP=src.app.py
+ENV FLASK_DATABASE_MIGRATE_DIR=src/migrations
 
 CMD python src/app.py
