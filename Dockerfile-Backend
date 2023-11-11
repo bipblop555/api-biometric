@@ -15,4 +15,4 @@ COPY Backend .
 ENV FLASK_APP=src.app.py
 ENV FLASK_DATABASE_MIGRATE_DIR=src/migrations
 
-CMD python src/app.py
+CMD flask db upgrade --directory src/migrations && python src/app.py

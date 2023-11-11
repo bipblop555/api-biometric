@@ -16,8 +16,6 @@ services:
     ports:
       - "3306:3306"
     restart: always
-    volumes:
-      - ./Backend/database/dump.sql:/docker-entrypoint-initdb.d/dump.sql
     environment:
       MYSQL_DATABASE: back
       MYSQL_ROOT_PASSWORD: password

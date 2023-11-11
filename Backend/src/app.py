@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:password@db:3306/back'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:password@db:3306/back?charset=utf8mb4&collation=utf8mb4_general_ci'
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
