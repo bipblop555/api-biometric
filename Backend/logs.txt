@@ -1,0 +1,206 @@
+Building backend
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile-Backend
+#1 transferring dockerfile: 470B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.10-alpine
+#3 DONE 0.4s
+
+#4 [1/6] FROM docker.io/library/python:3.10-alpine@sha256:28986068e3a715708b7f2e0fc4c06c748fe882fb76403424c2e854483fb45304
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 2.25kB done
+#5 DONE 0.0s
+
+#6 [2/6] WORKDIR /Backend
+#6 CACHED
+
+#7 [3/6] COPY Backend/requirements/requirements.txt /requirements/requirements.txt
+#7 CACHED
+
+#8 [4/6] RUN apk update &&     apk add --no-cache mariadb-connector-c &&     pip install --no-cache-dir -r /requirements/requirements.txt
+#8 CACHED
+
+#9 [5/6] RUN pip freeze > /requirements/requirements.txt
+#9 CACHED
+
+#10 [6/6] COPY Backend .
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers 0.0s done
+#11 writing image sha256:6285f625b441e90a0fac0adfd344f59f85487158a37ae49bfa2b4c1dd83a2045 done
+#11 naming to docker.io/library/api-biometric_backend done
+#11 DONE 0.0s
+Recreating api-biometric_backend_1 ... 
+Database is up-to-date
+adminer is up-to-date
+Recreating api-biometric_backend_1 ... done
+Attaching to Database, adminer, api-biometric_backend_1
+[36mDatabase   |[0m 2023-11-13 19:25:13+00:00 [Note] [Entrypoint]: Entrypoint script for MariaDB Server 1:10.8.8+maria~ubu2204 started.
+[36mDatabase   |[0m 2023-11-13 19:25:13+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[36mDatabase   |[0m 2023-11-13 19:25:13+00:00 [Note] [Entrypoint]: Entrypoint script for MariaDB Server 1:10.8.8+maria~ubu2204 started.
+[36mDatabase   |[0m 2023-11-13 19:25:13+00:00 [Note] [Entrypoint]: Initializing database files
+[36mDatabase   |[0m 
+[36mDatabase   |[0m 
+[36mDatabase   |[0m PLEASE REMEMBER TO SET A PASSWORD FOR THE MariaDB root USER !
+[36mDatabase   |[0m To do so, start the server, then issue the following command:
+[36mDatabase   |[0m 
+[36mDatabase   |[0m '/usr/bin/mariadb-secure-installation'
+[36mDatabase   |[0m 
+[36mDatabase   |[0m which will also give you the option of removing the test
+[36mDatabase   |[0m databases and anonymous user created by default.  This is
+[36mDatabase   |[0m strongly recommended for production servers.
+[36mDatabase   |[0m 
+[36mDatabase   |[0m See the MariaDB Knowledgebase at https://mariadb.com/kb
+[36mDatabase   |[0m 
+[36mDatabase   |[0m Please report any problems at https://mariadb.org/jira
+[36mDatabase   |[0m 
+[36mDatabase   |[0m The latest information about MariaDB is available at https://mariadb.org/.
+[36mDatabase   |[0m 
+[36mDatabase   |[0m Consider joining MariaDB's strong and vibrant community:
+[36mDatabase   |[0m https://mariadb.org/get-involved/
+[36mDatabase   |[0m 
+[36mDatabase   |[0m 2023-11-13 19:25:14+00:00 [Note] [Entrypoint]: Database files initialized
+[36mDatabase   |[0m 2023-11-13 19:25:14+00:00 [Note] [Entrypoint]: Starting temporary server
+[36mDatabase   |[0m 2023-11-13 19:25:14+00:00 [Note] [Entrypoint]: Waiting for server startup
+[36mDatabase   |[0m 2023-11-13 19:25:14 0 [Note] Starting MariaDB 10.8.8-MariaDB-1:10.8.8+maria~ubu2204 source revision 2668d596d1b4da99206146e4a2a25fc2d5dabeff as process 96
+[36mDatabase   |[0m 2023-11-13 19:25:14 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+[36mDatabase   |[0m 2023-11-13 19:25:14 0 [Note] InnoDB: Number of transaction pools: 1
+[36mDatabase   |[0m 2023-11-13 19:25:14 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+[36mDatabase   |[0m 2023-11-13 19:25:14 0 [Note] mariadbd: O_TMPFILE is not supported on /tmp (disabling future attempts)
+[36mDatabase   |[0m 2023-11-13 19:25:14 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+[36mDatabase   |[0m 2023-11-13 19:25:14 0 [Note] InnoDB: Completed initialization of buffer pool
+[36mDatabase   |[0m 2023-11-13 19:25:14 0 [Note] InnoDB: File system buffers for log disabled (block size=512 bytes)
+[36mDatabase   |[0m 2023-11-13 19:25:14 0 [Note] InnoDB: 128 rollback segments are active.
+[36mDatabase   |[0m 2023-11-13 19:25:14 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+[36mDatabase   |[0m 2023-11-13 19:25:14 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+[36mDatabase   |[0m 2023-11-13 19:25:14 0 [Note] InnoDB: log sequence number 45452; transaction id 14
+[36mDatabase   |[0m 2023-11-13 19:25:14 0 [Note] Plugin 'FEEDBACK' is disabled.
+[36mDatabase   |[0m 2023-11-13 19:25:14 0 [Warning] 'user' entry 'root@6a52f0477157' ignored in --skip-name-resolve mode.
+[36mDatabase   |[0m 2023-11-13 19:25:14 0 [Warning] 'proxies_priv' entry '@% root@6a52f0477157' ignored in --skip-name-resolve mode.
+[36mDatabase   |[0m 2023-11-13 19:25:14 0 [Note] mariadbd: ready for connections.
+[36mDatabase   |[0m Version: '10.8.8-MariaDB-1:10.8.8+maria~ubu2204'  socket: '/run/mysqld/mysqld.sock'  port: 0  mariadb.org binary distribution
+[36mDatabase   |[0m 2023-11-13 19:25:15+00:00 [Note] [Entrypoint]: Temporary server started.
+[36mDatabase   |[0m 2023-11-13 19:25:16+00:00 [Note] [Entrypoint]: Creating database back
+[36mDatabase   |[0m 2023-11-13 19:25:16+00:00 [Note] [Entrypoint]: Securing system users (equivalent to running mysql_secure_installation)
+[36mDatabase   |[0m 
+[36mDatabase   |[0m 2023-11-13 19:25:16+00:00 [Note] [Entrypoint]: Stopping temporary server
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] mariadbd (initiated by: unknown): Normal shutdown
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] InnoDB: FTS optimize thread exiting.
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] InnoDB: Starting shutdown...
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] InnoDB: Dumping buffer pool(s) to /var/lib/mysql/ib_buffer_pool
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] InnoDB: Buffer pool(s) dump completed at 231113 19:25:16
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] InnoDB: Shutdown completed; log sequence number 46702; transaction id 15
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] mariadbd: Shutdown complete
+[36mDatabase   |[0m 
+[36mDatabase   |[0m 2023-11-13 19:25:16+00:00 [Note] [Entrypoint]: Temporary server stopped
+[36mDatabase   |[0m 
+[36mDatabase   |[0m 2023-11-13 19:25:16+00:00 [Note] [Entrypoint]: MariaDB init process done. Ready for start up.
+[36mDatabase   |[0m 
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] Starting MariaDB 10.8.8-MariaDB-1:10.8.8+maria~ubu2204 source revision 2668d596d1b4da99206146e4a2a25fc2d5dabeff as process 1
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] InnoDB: Number of transaction pools: 1
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] mariadbd: O_TMPFILE is not supported on /tmp (disabling future attempts)
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] InnoDB: Completed initialization of buffer pool
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] InnoDB: File system buffers for log disabled (block size=512 bytes)
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] InnoDB: 128 rollback segments are active.
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] InnoDB: log sequence number 46702; transaction id 14
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] Plugin 'FEEDBACK' is disabled.
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] InnoDB: Buffer pool(s) load completed at 231113 19:25:16
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Warning] You need to use --log-bin to make --expire-logs-days or --binlog-expire-logs-seconds work.
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] Server socket created on IP: '0.0.0.0'.
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] Server socket created on IP: '::'.
+[36mDatabase   |[0m 2023-11-13 19:25:16 0 [Note] mariadbd: ready for connections.
+[36mDatabase   |[0m Version: '10.8.8-MariaDB-1:10.8.8+maria~ubu2204'  socket: '/run/mysqld/mysqld.sock'  port: 3306  mariadb.org binary distribution
+[36mDatabase   |[0m 2023-11-13 19:43:41 0 [Note] mariadbd (initiated by: unknown): Normal shutdown
+[36mDatabase   |[0m 2023-11-13 19:43:41 0 [Note] InnoDB: FTS optimize thread exiting.
+[36mDatabase   |[0m 2023-11-13 19:43:41 0 [Note] InnoDB: Starting shutdown...
+[36mDatabase   |[0m 2023-11-13 19:43:41 0 [Note] InnoDB: Dumping buffer pool(s) to /var/lib/mysql/ib_buffer_pool
+[36mDatabase   |[0m 2023-11-13 19:43:41 0 [Note] InnoDB: Buffer pool(s) dump completed at 231113 19:43:41
+[36mDatabase   |[0m 2023-11-13 19:43:41 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+[36mDatabase   |[0m 2023-11-13 19:43:41 0 [Note] InnoDB: Shutdown completed; log sequence number 47126; transaction id 15
+[36mDatabase   |[0m 2023-11-13 19:43:41 0 [Note] mariadbd: Shutdown complete
+[36mDatabase   |[0m 
+[36mDatabase   |[0m 2023-11-13 19:45:17+00:00 [Note] [Entrypoint]: Entrypoint script for MariaDB Server 1:10.8.8+maria~ubu2204 started.
+[36mDatabase   |[0m 2023-11-13 19:45:17+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+[36mDatabase   |[0m 2023-11-13 19:45:17+00:00 [Note] [Entrypoint]: Entrypoint script for MariaDB Server 1:10.8.8+maria~ubu2204 started.
+[36mDatabase   |[0m 2023-11-13 19:45:17+00:00 [Note] [Entrypoint]: MariaDB upgrade not required
+[36mDatabase   |[0m 2023-11-13 19:45:17 0 [Note] Starting MariaDB 10.8.8-MariaDB-1:10.8.8+maria~ubu2204 source revision 2668d596d1b4da99206146e4a2a25fc2d5dabeff as process 1
+[36mDatabase   |[0m 2023-11-13 19:45:17 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+[36mDatabase   |[0m 2023-11-13 19:45:17 0 [Note] InnoDB: Number of transaction pools: 1
+[36mDatabase   |[0m 2023-11-13 19:45:17 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+[36mDatabase   |[0m 2023-11-13 19:45:17 0 [Note] mariadbd: O_TMPFILE is not supported on /tmp (disabling future attempts)
+[36mDatabase   |[0m 2023-11-13 19:45:17 0 [Note] InnoDB: Initializing buffer pool, total size = 128.000MiB, chunk size = 2.000MiB
+[36mDatabase   |[0m 2023-11-13 19:45:17 0 [Note] InnoDB: Completed initialization of buffer pool
+[36mDatabase   |[0m 2023-11-13 19:45:17 0 [Note] InnoDB: File system buffers for log disabled (block size=512 bytes)
+[36mDatabase   |[0m 2023-11-13 19:45:17 0 [Note] InnoDB: 128 rollback segments are active.
+[36mDatabase   |[0m 2023-11-13 19:45:17 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+[36mDatabase   |[0m 2023-11-13 19:45:17 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+[36mDatabase   |[0m 2023-11-13 19:45:17 0 [Note] InnoDB: log sequence number 47126; transaction id 16
+[36mDatabase   |[0m 2023-11-13 19:45:17 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+[36mDatabase   |[0m 2023-11-13 19:45:17 0 [Note] Plugin 'FEEDBACK' is disabled.
+[36mDatabase   |[0m 2023-11-13 19:45:17 0 [Warning] You need to use --log-bin to make --expire-logs-days or --binlog-expire-logs-seconds work.
+[36mDatabase   |[0m 2023-11-13 19:45:17 0 [Note] InnoDB: Buffer pool(s) load completed at 231113 19:45:17
+[36mDatabase   |[0m 2023-11-13 19:45:17 0 [Note] Server socket created on IP: '0.0.0.0'.
+[36mDatabase   |[0m 2023-11-13 19:45:17 0 [Note] Server socket created on IP: '::'.
+[36mDatabase   |[0m 2023-11-13 19:45:17 0 [Note] mariadbd: ready for connections.
+[36mDatabase   |[0m Version: '10.8.8-MariaDB-1:10.8.8+maria~ubu2204'  socket: '/run/mysqld/mysqld.sock'  port: 3306  mariadb.org binary distribution
+[33madminer    |[0m [Mon Nov 13 19:25:13 2023] PHP 7.4.33 Development Server (http://[::]:8080) started
+[33madminer    |[0m [Mon Nov 13 19:45:17 2023] PHP 7.4.33 Development Server (http://[::]:8080) started
+[32mbackend_1  |[0m Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+[32mbackend_1  |[0m  * Serving Flask app 'app'
+[32mbackend_1  |[0m  * Debug mode: on
+[32mbackend_1  |[0m [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+[32mbackend_1  |[0m  * Running on all addresses (0.0.0.0)
+[32mbackend_1  |[0m  * Running on http://127.0.0.1:5000
+[32mbackend_1  |[0m  * Running on http://192.168.16.4:5000
+[32mbackend_1  |[0m [33mPress CTRL+C to quit[0m
+[32mbackend_1  |[0m  * Restarting with watchdog (inotify)
+[32mbackend_1  |[0m Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+[32mbackend_1  |[0m  * Debugger is active!
+[32mbackend_1  |[0m  * Debugger PIN: 656-805-544
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:23] "GET /socket.io/?EIO=4&transport=polling&t=OlAEqCY HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:23] "POST /socket.io/?EIO=4&transport=polling&t=OlAEqCh&sid=V2-2UvB0e6xNSwgXAAAA HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:23] "GET /socket.io/?EIO=4&transport=polling&t=OlAEqCh.0&sid=V2-2UvB0e6xNSwgXAAAA HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:24] "GET /socket.io/?EIO=4&transport=polling&t=OlAEqCn&sid=V2-2UvB0e6xNSwgXAAAA HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:24] "GET /socket.io/?EIO=4&transport=polling&t=OlAEqTv HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:24] "POST /socket.io/?EIO=4&transport=polling&t=OlAEqU3&sid=GjUegJCz95L7ReKdAAAC HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:24] "GET /socket.io/?EIO=4&transport=polling&t=OlAEqU3.0&sid=GjUegJCz95L7ReKdAAAC HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:24] "GET /socket.io/?EIO=4&transport=polling&t=OlAEqUA&sid=GjUegJCz95L7ReKdAAAC HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:25] "GET /socket.io/?EIO=4&transport=polling&t=OlAEqdo HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:25] "POST /socket.io/?EIO=4&transport=polling&t=OlAEqdt&sid=4nRZlG_4k5m6lkDnAAAE HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:25] "GET /socket.io/?EIO=4&transport=polling&t=OlAEqdu&sid=4nRZlG_4k5m6lkDnAAAE HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:25] "GET /socket.io/?EIO=4&transport=polling&t=OlAEqe0&sid=4nRZlG_4k5m6lkDnAAAE HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:25] "GET /socket.io/?EIO=4&transport=polling&t=OlAEqkZ HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:25] "POST /socket.io/?EIO=4&transport=polling&t=OlAEqkh&sid=ZhJHKt2B3urWSf88AAAG HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:25] "GET /socket.io/?EIO=4&transport=polling&t=OlAEqki&sid=ZhJHKt2B3urWSf88AAAG HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:25] "GET /socket.io/?EIO=4&transport=polling&t=OlAEqkp&sid=ZhJHKt2B3urWSf88AAAG HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:25] "GET /socket.io/?EIO=4&transport=polling&t=OlAEqmm HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:25] "POST /socket.io/?EIO=4&transport=polling&t=OlAEqmw&sid=mJX-MZCSZoADqVVGAAAI HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:25] "GET /socket.io/?EIO=4&transport=polling&t=OlAEqmw.0&sid=mJX-MZCSZoADqVVGAAAI HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:25] "GET /socket.io/?EIO=4&transport=polling&t=OlAEqn2&sid=mJX-MZCSZoADqVVGAAAI HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:26] "GET /socket.io/?EIO=4&transport=polling&t=OlAEqxm HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:26] "POST /socket.io/?EIO=4&transport=polling&t=OlAEqxx&sid=jG2tAE9pWiuJ9rEYAAAK HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:26] "GET /socket.io/?EIO=4&transport=polling&t=OlAEqxy&sid=jG2tAE9pWiuJ9rEYAAAK HTTP/1.1" 200 -
+[32mbackend_1  |[0m 192.168.16.1 - - [13/Nov/2023 19:49:26] "GET /socket.io/?EIO=4&transport=polling&t=OlAEqy2&sid=jG2tAE9pWiuJ9rEYAAAK HTTP/1.1" 200 -
+Stopping api-biometric_backend_1   ... 
+Stopping Database                  ... 
+Stopping adminer                   ... 
+Stopping adminer                   ... done
+Stopping api-biometric_backend_1   ... done
+Stopping Database                  ... done
+Gracefully stopping... (press Ctrl+C again to force)

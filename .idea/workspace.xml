@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8de69431-e57b-42a9-ab09-5820a18294ef" name="Changes" comment="add new migration">
+      <change afterPath="$PROJECT_DIR$/Backend/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/controllers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/controllers/auth_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/controllers/socket_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/models/User.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/src/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/Home/Home.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/Home/styleHome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/OnboardingChooseAuth/OnboardingChooseAuth.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/OnboardingChooseAuth/styleChoose.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/OnboardingLogin/OnboardingLogin.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/OnboardingLogin/styleLogin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/OnboardingRegister/OnboardingRegister.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/OnboardingRegister/styleRegister.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/OnboardingWelcome/OnboardingWelcome.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/OnboardingWelcome/styleWelcome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temp/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/config/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/config/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/config/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/config/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/requirements/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/requirements/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/controllers/auth.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/migrations/versions/9e4936d7d347_create_user_table_migration.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/migrations/versions/9e4936d7d347_create_user_table_migration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/models/user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile-Backend" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile-Backend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+        <option value="Python Script" />
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Backend/src/file.txt" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2XwwlEChdABJscdEpg9iSUBuFWm" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/altair/Code/api-biometric/frontend/src/screens/Home",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/home/altair/Code/api-biometric/frontend/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Python"
+    ]
+  }
+}]]></component>
+  <component name="PyFindUsagesOptions">
+    <option name="isSearchForTextOccurrences" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/screens/Home" />
+      <recent name="$PROJECT_DIR$/frontend/src/screens" />
+      <recent name="$PROJECT_DIR$/Backend/src/routes" />
+      <recent name="$PROJECT_DIR$/frontend/src/screens/OnboardingChooseAuth" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/temp" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Backend/src/controllers" />
+      <recent name="$PROJECT_DIR$/Backend" />
+      <recent name="$PROJECT_DIR$/frontend/src/screens/OnboardingChooseAuth" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="api-biometric" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.8" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Téléchargements" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Téléchargements/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8de69431-e57b-42a9-ab09-5820a18294ef" name="Changes" comment="" />
+      <created>1699553599813</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699553599813</updated>
+      <workItem from="1699553601005" duration="142000" />
+      <workItem from="1699553753417" duration="286000" />
+      <workItem from="1699554050563" duration="8100000" />
+      <workItem from="1699563594024" duration="223000" />
+      <workItem from="1699563825264" duration="4949000" />
+      <workItem from="1699626426393" duration="63000" />
+      <workItem from="1699632817944" duration="13184000" />
+      <workItem from="1699719616662" duration="5519000" />
+      <workItem from="1699729764663" duration="13807000" />
+      <workItem from="1699804790554" duration="3475000" />
+      <workItem from="1699899216891" duration="13228000" />
+      <workItem from="1699960497589" duration="19799000" />
+      <workItem from="1699991489664" duration="20425000" />
+      <workItem from="1700077689795" duration="7798000" />
+      <workItem from="1700086240068" duration="5167000" />
+      <workItem from="1700172497058" duration="1408000" />
+      <workItem from="1700215467263" duration="1395000" />
+      <workItem from="1700218660058" duration="1922000" />
+      <workItem from="1700234645534" duration="21948000" />
+      <workItem from="1700334066235" duration="15140000" />
+      <workItem from="1700469541222" duration="322000" />
+      <workItem from="1700470778100" duration="1806000" />
+      <workItem from="1700474586216" duration="15471000" />
+      <workItem from="1700508626558" duration="18783000" />
+      <workItem from="1700555264621" duration="10400000" />
+    </task>
+    <task id="LOCAL-00001" summary="Update docker">
+      <option name="closed" value="true" />
+      <created>1699712305862</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699712305862</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Delete file">
+      <option name="closed" value="true" />
+      <created>1699712330106</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699712330106</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update app">
+      <option name="closed" value="true" />
+      <created>1699712360713</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699712360713</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fix">
+      <option name="closed" value="true" />
+      <created>1699716350540</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699716350540</updated>
+    </task>
+    <task id="LOCAL-00005" summary="remove update migration">
+      <option name="closed" value="true" />
+      <created>1699716729862</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699716729862</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add new migration">
+      <option name="closed" value="true" />
+      <created>1699717177720</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699717177720</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update docker" />
+    <MESSAGE value="Delete file" />
+    <MESSAGE value="Update app" />
+    <MESSAGE value="Fix" />
+    <MESSAGE value="remove update migration" />
+    <MESSAGE value="add new migration" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new migration" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/api_biometric$run.coverage" NAME="run Coverage Results" MODIFIED="1700565236409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Téléchargements" />
+  </component>
+</project>
