@@ -1,14 +1,11 @@
-from flask import Blueprint, jsonify
+from flask import Blueprint
 from flask_socketio import emit, SocketIO
 import numpy as np
 from PIL import Image
 from io import BytesIO
 from src import db, socketio
 import cv2
-import os
 import face_recognition
-import pickle
-import base64
 import json
 import ast
 
@@ -18,30 +15,25 @@ auth_bp = Blueprint('auth', __name__)
 @socketio.on('login')
 def register(stream):
     frame_analyser = False
-    with open("encodings.pkl", "rb") as f:
-        saved_encodings = pickle.load(f)
 
     facial_recognition = FacialRecognition()
 
     from src.models.User import User
 
-    toto = User.query.filter_by(username=stream[0]).first()
+    user = User.query.filter_by(username=stream[0]).first()
 
     unknown_biometric_facial = facial_recognition.execute(stream[1])
-    #
-    biometric_key_str = toto.biometric_key.decode('utf-8')
+
+    biometric_key_str = user.biometric_key.decode('utf-8')
 
     biometric_key_list = ast.literal_eval(biometric_key_str)
 
-    if len(saved_encodings) > 0 and unknown_biometric_facial is not False:
+    if unknown_biometric_facial is not False:
         frame_analyser = facial_recognition.compare_biometric_facial(unknown_biometric_facial, [biometric_key_list])
-        print('frame_analyser', frame_analyser, flush=True)
 
     face_cascade = cv2.CascadeClassifier('/Backend/src/haarcascade/haarcascade_frontalface_default.xml')
 
     face_position = FrameVideoAnalyse(face_cascade, stream[1]).detect_face_position()
-    print('frame_analyser', frame_analyser, flush=True)
-    print('type', type(frame_analyser), flush=True)
 
     emit('login', json.dumps({
         'data': {
@@ -57,17 +49,14 @@ def register(stream):
 
 @socketio.on('register')
 def handle_stream(stream):
-    similar_facial = False
-
-    print('hi', flush=True)
     facial_recognition = FacialRecognition()
 
-    unknown_biometric_facial = facial_recognition.execute(stream[ 1 ])
+    unknown_biometric_facial = facial_recognition.execute(stream[1])
 
     from src.models.User import User
     biometric_key_str = json.dumps(unknown_biometric_facial.tolist())
 
-    new_user = User(username=stream[ 0 ], biometric_key=biometric_key_str)
+    new_user = User(username=stream[0], biometric_key=biometric_key_str)
     db.session.add(new_user)
     db.session.commit()
 
@@ -118,7 +107,7 @@ class FrameVideoAnalyse:
         if len(face) > 0:
             for (x, y, w, h) in face:
                 return int(x), int(w), int(y), int(h)
-        return [ ]
+        return []
 
 
 def bytes_to_image(byte_data):
